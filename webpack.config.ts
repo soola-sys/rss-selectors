@@ -1,6 +1,7 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
+import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 
 interface IEnv {
     mode: 'production' | 'development'
@@ -31,9 +32,15 @@ export default (env : IEnv) => {
         resolve: {
             extensions: [".tsx", ".ts", ".js"],
         },
+        devServer:  {
+            static: {
+                directory: path.join(__dirname, './build')
+            },
+        },        
         plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src' ,'index.html'),
+            favicon: "./src/components/view/img/css-icon.png"
         })
     ],
     }
