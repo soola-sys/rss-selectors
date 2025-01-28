@@ -1,6 +1,5 @@
-// import IParam from '../../../types/types';
-import IParam from '../../../types/types';
-import IElementCreator from '../../../types/types';
+import { IParam } from '../../../types/types';
+import { IElementCreator } from '../../../types/types';
 
 export default class ElementCreator implements IElementCreator {
   private node: HTMLElement;

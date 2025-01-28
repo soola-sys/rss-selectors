@@ -1,5 +1,4 @@
 import ElementCreator from './utils/element-creator';
-import IParam from '../../types/types';
 const cssClasses = {
   wrapper: 'wrapper',
 };
@@ -8,6 +7,9 @@ const text = 'Test text';
 
 export default class App {
   constructor() {
+    this.start();
+  }
+  start() {
     this.createView();
   }
   createView() {

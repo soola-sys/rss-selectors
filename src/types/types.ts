@@ -1,10 +1,10 @@
-export default interface IParam {
-  tagName: keyof HTMLElementTagNameMap;
+export interface IParam {
+  tagName: string;
   classNames: string[];
   textContent: string;
   parentNode?: HTMLElement;
 }
-export default interface IElementCreator {
+export interface IElementCreator {
   append(child: Node): void;
   getNode(): HTMLElement;
   destroy(): void;
