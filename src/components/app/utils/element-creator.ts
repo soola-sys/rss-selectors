@@ -1,7 +1,7 @@
 import { IParam } from '../../../types/types';
-import { IElementCreator } from '../../../types/types';
+import { IElementCreatorProps } from '../../../types/types';
 
-export default class ElementCreator implements IElementCreator {
+export default class ElementCreator implements IElementCreatorProps {
   private node: HTMLElement;
   constructor({ tagName = 'div', classNames = [], textContent = '', parentNode }: IParam) {
     this.node = document.createElement(tagName);

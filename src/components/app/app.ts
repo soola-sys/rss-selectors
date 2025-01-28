@@ -1,24 +1,10 @@
-import ElementCreator from './utils/element-creator';
-const cssClasses = {
-  wrapper: 'wrapper',
-};
-
-const text = 'Test text';
-
+import FooterView from '../../components/view/footer/footer-view';
 export default class App {
   constructor() {
-    this.start();
-  }
-  start() {
     this.createView();
   }
   createView() {
-    const textParam = {
-      tagName: 'p',
-      classNames: [cssClasses.wrapper],
-      textContent: text,
-    };
-    const creator = new ElementCreator(textParam);
-    return creator;
+    const footerView = new FooterView();
+    document.body.append(footerView.getHtmlElement());
   }
 }

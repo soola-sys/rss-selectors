@@ -4,7 +4,7 @@ export interface IParam {
   textContent: string;
   parentNode?: HTMLElement;
 }
-export interface IElementCreator {
+export interface IElementCreatorProps {
   append(child: Node): void;
   getNode(): HTMLElement;
   destroy(): void;
