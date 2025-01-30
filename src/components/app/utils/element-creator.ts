@@ -19,6 +19,12 @@ export default class ElementCreator implements IElementCreatorProps {
       this.node.appendChild(child);
     }
   }
+  appendChildren(children: Array<ChildNode>) {
+    children.forEach((el) => {
+      this.append(el);
+    });
+  }
+
   getNode(): HTMLElement {
     return this.node;
   }

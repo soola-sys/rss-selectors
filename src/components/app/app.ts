@@ -1,10 +1,15 @@
-import FooterView from '../../components/view/footer/footer-view';
+import MainView from '../../components/view/main/main-view';
+import WrapperView from '../../components/view/wrapper/wrapper';
+import AsideView from '../../components/view/aside/aside-view';
 export default class App {
   constructor() {
     this.createView();
   }
   createView() {
-    const footerView = new FooterView();
-    document.body.append(footerView.getHtmlElement());
+    const wrapper = new WrapperView();
+    const mainView = new MainView();
+    const aside = new AsideView();
+    wrapper.getHtmlElement().append(mainView.getHtmlElement(), aside.getHtmlElement());
+    document.body.append(wrapper.getHtmlElement());
   }
 }

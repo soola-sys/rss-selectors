@@ -2,6 +2,9 @@ html {
     padding: 0;
     margin: 0;
 }
+.wrapper {
+    display: flex;
+}
 
 * {
     box-sizing: border-box;
@@ -25,9 +28,6 @@ body {
     color: brown;
 }
 
-.wrapper {
-    display: flex;
-}
 .editor {
     display: flex;
     font-family: menlo, monospace;
@@ -132,14 +132,3 @@ input {
     width: 20%;
 }
 
-.sidebar {
-    position: fixed;
-    width: 10rem;
-    right: 0;
-    /* overflow: auto; */
-    top: 40px;
-    top: 0;
-    bottom: 0;
-    background: #221e18;
-    z-index: 1;
-}

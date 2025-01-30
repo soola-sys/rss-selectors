@@ -1,0 +1,11 @@
+.sidebar {
+    position: fixed;
+    width: 10rem;
+    right: 0;
+    /* overflow: auto; */
+    top: 40px;
+    top: 0;
+    bottom: 0;
+    background: #221e18;
+    z-index: 1;
+}
