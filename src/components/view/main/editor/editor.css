@@ -1,0 +1,9 @@
+.editor {
+    display: flex;
+    font-family: menlo, monospace;
+    padding: 10px;
+    background-color: #1e1b17;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 4px;
+}

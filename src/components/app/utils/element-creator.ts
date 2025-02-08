@@ -3,12 +3,15 @@ import { IElementCreatorProps } from '../../../types/types';
 
 export default class ElementCreator implements IElementCreatorProps {
   private node: HTMLElement;
-  constructor({ tagName = 'div', classNames = [], textContent = '', parentNode }: IParam) {
+  constructor({ tagName = 'div', classNames = [], textContent = '', parentNode, callback }: IParam) {
     this.node = document.createElement(tagName);
     this.node.classList.add(...classNames);
     this.node.textContent = textContent;
     if (parentNode) {
       parentNode.append(this.node);
+    }
+    if (callback && typeof callback === 'function') {
+      this.node.addEventListener('click', (e) => callback(e));
     }
   }
 
@@ -19,6 +22,7 @@ export default class ElementCreator implements IElementCreatorProps {
       this.node.appendChild(child);
     }
   }
+
   appendChildren(children: Array<ChildNode>) {
     children.forEach((el) => {
       this.append(el);

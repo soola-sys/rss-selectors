@@ -3,6 +3,7 @@ export interface IParam {
   classNames: string[];
   textContent?: string;
   parentNode?: HTMLElement;
+  callback?(e: Event): void;
 }
 export interface IElementCreatorProps {
   append(child: Node): void;
