@@ -23,7 +23,7 @@ export default class ElementCreator implements IElementCreatorProps {
     }
   }
 
-  appendChildren(children: Array<ChildNode>) {
+  appendChildren(children: Array<ChildNode>): void {
     children.forEach((el) => {
       this.append(el);
     });
@@ -35,7 +35,7 @@ export default class ElementCreator implements IElementCreatorProps {
   destroy(): void {
     this.node.remove();
   }
-  addClass(className: string) {
+  addClass(className: string): void {
     this.node.classList.add(className);
   }
 }

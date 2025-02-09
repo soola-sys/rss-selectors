@@ -12,3 +12,14 @@ export interface IElementCreatorProps {
   addClass(className: string): void;
   appendChildren(children: Array<ChildNode>): void;
 }
+
+export interface ISelectorMockProps {
+  level: string;
+  title: string;
+  syntax: string;
+  correctSelector: string;
+  isChosen: boolean;
+  useHelp: boolean;
+  isCompleted: boolean;
+  tableElement: object[];
+}
