@@ -1,6 +1,6 @@
 export interface IParam {
   tagName: string;
-  classNames: string[];
+  classNames?: string[];
   textContent?: string;
   parentNode?: HTMLElement;
   callback?(e: Event): void;
